@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions</title>
+</head>
+
+
+<body>
+
+<h1>Hello World</h1>
+
+<h3>A demonistration of how to access a Text Field</h3>
+
+<input type="text" id="myText" placeholder="Enter Your Name Here...">
+
+<p>Click the "Try it"button to get the text in the text field.</p>
+
+<button onclick="myFunction()">Try it(Name)</button>
+
+<p id="NameHere"></p>
+
+<h2>And Now This...</h2>
+
+<input type="text" id="myAge" placeholder="Enter Your Age Here..."></input>
+
+<p>Click the "Try it" button to get the age in the field.</p>
+
+<button onclick="myAgeFunction()">Try it(Age)</button>
+
+<p id="AgeHere"></p>
+
+<script>
+	function myFunction() {
+		var x = document.getElementById("myText").value;
+		document.getElementById("NameHere").innerHTML = x;
+	} 
+
+	function myAgeFunction(){
+		var x = document.getElementById("myAge").value;
+
+		if(!(/^[-+]?\d*\.?\d*$/.test(document.getElementById("myAge").value))){
+			alert("Please enter only numbers into amount textbox")
+		}
+		
+	
+	//x= parseInt(x)+ parseInt(10)
+	document.getElementById("AgeHere").innerHTML = x;
+}
+
+</script>
+</body>
+
+</html>
